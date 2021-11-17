@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  lab:
+    environment:
+    - DISABLE_AUTH=true
+    image: mlkaufman/scrnaseq-rstudio:latest
+    volumes:
+     - ././:/home/rstudio
+    ports:
+      - "8787:8787"
