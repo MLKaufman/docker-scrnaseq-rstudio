@@ -5,6 +5,6 @@ LABEL image.authors="Michael Kaufman"
 RUN Rscript -e "BiocManager::install(c('tidyverse', 'rmarkdown', 'Seurat','cowplot', 'ComplexHeatmap', 'scran','scDblFinder', 'limma', 'clustifyr', 'slingshot', 'tradeSeq', 'clusterExperiment'))"
 RUN installGithub.r theislab/destiny
 RUN installGithub.r immunogenomics/harmony
-RUN Rscript -e "install.packages('markdown', 'ggsci')"
+RUN Rscript -e "install.packages(c('markdown', 'ggsci'))"
 
 WORKDIR /home/rstudio
